@@ -70,6 +70,7 @@ const DonationHistory = () => {
             <table className="w-full border border-gray-300 text-black">
               <thead>
                 <tr className="bg-gray-200 text-gray-700">
+                  <th className="p-2 text-left border-b">Charity Name</th>{" "}
                   <th className="p-2 text-left border-b">Amount (MATIC)</th>
                   <th className="p-2 text-left border-b">Timestamp</th>
                 </tr>
@@ -77,6 +78,7 @@ const DonationHistory = () => {
               <tbody>
                 {amountHis.map((amount, index) => (
                   <tr key={index}>
+                    <td className="p-2 border-b"></td>
                     <td className="p-2 border-b">{amount.toFixed(2)} MATIC</td>
                     <td className="p-2 border-b">
                       {new Date(timeHis[index] * 1000).toLocaleString()}
